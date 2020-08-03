@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jessy.Cormier</title>
     <style>
+      /* Use a fallback font */
+      html.fa-events-typefaces-lato-loading h1,
+      html.fa-events-typefaces-lato-loading h2,
+      html.fa-events-typefaces-lato-loading button {
+        font-family: sans-serif;
+      }
+
+
       html,
       body,
       p,
@@ -60,12 +68,13 @@
         max-width: 100%;
       }
 
-      html,
       body {
         border-top: solid 7px black;
         font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
         font-size: 20px;
+        padding: 1em;
       }
+
       p {
         margin-bottom: 1em;
       }
@@ -73,9 +82,28 @@
       hr {
         margin: 1em auto;
       }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-bottom: 1em;
+      }
+
       main {
-        width: 800px;
-        margin: 3rem auto 0 auto;
+        display: flex;
+      }
+
+      aside.about-me {
+        max-width: 321px;
+        text-align: justify;
+      }
+
+      section.content {
+        flex-grow: 1;
+        margin: auto 2em;
       }
 
       .debug {
@@ -86,8 +114,8 @@
         display: inline-block;
         border: solid 7px black;
         border-radius: 100%;
-        width: 15rem;
-        height: 15rem;
+        width: 12rem;
+        height: 12rem;
         background: url(me2.jpg);
         background-repeat: no-repeat;
         background-size: contain;
@@ -97,10 +125,51 @@
         text-align: center;
       }
 
+      .text-lead {
+        font-size: 0.9em;
+        font-weight: 300;
+      }
+
       .mt-3 {
         margin-top: 3em;
       }
+
+      footer nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 42px;
+        border-top: solid 1px black;
+      }
+
+      a {
+        transition: all 400ms;
+      }
+
+      a:hover,
+      a:active {
+        color: #000 !important;
+        background-color: #eee;
+        border-radius: 4px;
+      }
+
+      a:link,
+      a:visited {
+        color: #666;
+      }
+
+      @media screen and (min-width: 0px) and (max-width: 600px) {
+        .screen-sm-hide {
+          display: none;
+        }
+        main {
+          display: block;
+        }
+      }
+
     </style>
+    <script src="https://kit.fontawesome.com/e3785296b5.js" crossorigin="anonymous"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174236935-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -112,40 +181,65 @@
 
   <body>
     <section class="mood-bar"></section>
+
     <main>
-      <section class="text-center">   
-        <div class="me-portrait"></div>
-        <h1>Jessy Cormier</h1>
+      <aside class="about-me mt-3">
+        <div class="text-center">
+          <div class="me-portrait"></div>
+          <h1>Jessy Cormier</h1>
+        </div>
+        <h5>
+          A little bit about me
+        </h5>
+        <p class="text-lead">
+          I'm a "techy" that loves front-end development and design. I've been a professional developer for companies and clients for 12
+          years
+          starting around the time I graduated from NBCC. I've also been developing before then giving me about 16 years of experience now.
+          I
+          had some great opportunities working with local and far away companies.
+        </p>
+        <p class="text-lead">
+          Today I work for Aspen University as a developer building the software that runs some of their university. I work in a special
+          position floating between teams doing front-end development as well as user experience development. I've had the opportunity to
+          teach at NBCC in the past which let me see the value and joy that can be had in sharing expertise and knowledge.
+        </p>
+        <footer>
+          <nav>
+            <a href="https://www.linkedin.com/in/jessycormier/" target="_blank"><i class="fab fa-fw fa-linkedin"
+                title="Seem my LinkedIn profile"></i></a>
+            <a href="https://github.com/jessycormier" target="_blank"><i class="fab fa-fw fa-github"
+                title="Check out some of my work on GitHub"></i></a>
+            <a href="https://stackoverflow.com/users/396842/jessy" target="_blank"><i class="fab fa-fw fa-stack-overflow"
+                title="See my Stack Overflow profile"></i></a>
+            <a href="mailto:jessycormier+consult@gmail.com?subject=Important!"><i class="far fa-fw fa-envelope"
+                title="Send me an email"></i></a>
+            <a href="https://twitter.com/jessycormier" target="_blank"><i class="fab fa-fw fa-twitter"
+                title="Chat with me on Twitter"></i></a>
+            <a href="https://www.facebook.com/jessycormier" target="_blank"><i class="fab fa-fw fa-facebook-f"
+                title="Chat with me on Facebook"></i></a>
+            <a href="https://dribbble.com/jessycormier" target="_blank"><i class="fab fa-fw fa-dribbble" title=""></i></a>
+            <a href="" onclick="alert('My discord name is: Jessy#5436')"><i class="fab fa-fw fa-discord" title=""></i></a>
+            <!-- <a href="https://dev.to/jessycormier" target="_blank"><i class="fab fa-fw fa-dev" title=""></i></a> -->
+            <!-- <a href="https://medium.com/@jessycormier" target="_blank"><i class="fab fa-fw fa-medium-m" title=""></i></a> -->
+            <!-- <a href="https://www.behance.net/jessycormic87e" target="_blank"><i class="fab fa-fw fa-behance" title=""></i></a> -->
+            <!-- <a href="https://www.youtube.com/channel/UCH8jkbdKlGrUIwLVHjETWTQ" target="_blank"><i class="fab fa-fw fa-youtube" title="Check out some of my YouTube Content"></i></a> -->
+          </nav>
+        </footer>
+      </aside>
+      <section class="content text-center">
+        <p class="screen-sm-hide">
+          Welcome, I'm Jessy Cormier a front-end and user experience developer.
+        </p>
+
+        <p>
+          Feel free to reach out if you want solutions for your technical issues.
+        </p>
       </section>
-      <p class="mt-3">
-        Hi, I'm Jessy Cormier and I'm a professional technology consultant and developer. I would love to find the right solution for your
-        needs.
-      </p>
-      <h5>
-        A little bit about me
-      </h5>
-      <p>
-        I'm a "techy" that loves front-end development and design. I've been a professional developer for companies and clients for 12 years
-        starting around the time I graduated from NBCC. I've also been developing before then giving me about 16 years of experience now. I
-        had some great opportunities working with local and far away companies.
-      </p>
-      <p>
-        Today I work for Aspen University as a developer building the software that runs some of their university. I work in a special
-        position floating between teams doing front-end development as well as user experience development. I've had the opportunity to
-        teach at NBCC in the past which let me see the value and joy that can be had in sharing expertise and knowledge.
-      </p>
-      <hr>
-
-      <p>
-        Welcome, I'm Jessy Cormier a front-end and user experience developer.
-      </p>
-
-      <p>
-        Feel free to reach out if you want solutions for your technical issues.
-      </p>
 
       <!-- <img src="me.jpg" alt="Picture of Jessy Cormier" style="height: 25vh; position: absolute; right: 10px; bottom:0;"> -->
     </main>
+
+
   </body>
 
 </html>
