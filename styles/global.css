@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply transition-colors;
+    @apply bg-gray-50;
+    @apply dark:bg-gray-800 dark:text-gray-300;
+  }
+  a {
+    @apply transition-colors;
+    @apply text-blue-500 font-bold;
+    @apply hover:text-blue-700;
+
+    @apply dark:text-blue-400;
+    @apply hover:dark:text-yellow-200;
+  }
+}
