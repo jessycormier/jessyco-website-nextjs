@@ -2,11 +2,11 @@ import Head from "next/head";
 import LayoutFooter from "../components/layout/footer";
 import LayoutHeader from "../components/layout/header";
 
-export default function Index() {
+export default function NowPage() {
   return (
     <>
       <Head>
-        <title>Jessy.Co</title>
+        <title>Jessy.Co - Now</title>
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
@@ -23,23 +23,17 @@ export default function Index() {
         />
       </Head>
       <div className="flex flex-col items-center justify-center min-h-screen py-2">
-        <LayoutHeader></LayoutHeader>
+      <LayoutHeader></LayoutHeader>
 
         <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center max-w-lg">
-          <img
-            className="rounded-full border-8 border-gray-800 dark:border-gray-700 mt-16"
-            src="/profile.jpg"
-            width={200}
-            height={200}
-          />
-
-          <p className="mt-8">
-            Hey, thanks for visiting my website. My name is Jessy Cormier and I
-            build front-end stuff.
-          </p>
+          <h1 className="font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-800">Now</h1>
+          <ul className="mt-16">
+            <li>Developing this website</li>
+            <li>Self improvement</li>
+            <li>Planning for building a house</li>
+            <li>Playing a few games: Forger, Mass Effect, No Mans Sky</li>
+          </ul>
         </main>
-
-        <LayoutFooter></LayoutFooter>
       </div>
     </>
   );
