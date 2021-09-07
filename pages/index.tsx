@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import CenterContentLayout from "../components/layout/center-content.layout";
 
 export default function Index() {
@@ -13,12 +12,12 @@ export default function Index() {
       />
 
       <p className="mt-8">
-        Hey, thanks for visiting my website. My name is Jessy Cormier and I
+        Hey, thanks for visiting. My name is Jessy Cormier and I
         build front-end stuff.
       </p>
 
       <p className="mt-4">
-        See what I'm up to <Link href="/now"><a>Now</a></Link>.
+        See what I'm up to right <Link href="/now"><a>Now</a></Link>.
       </p>
     </CenterContentLayout>
   );
