@@ -1,10 +1,11 @@
 import Document, {
   DocumentContext,
-  Html,
   Head,
+  Html,
   Main,
-  NextScript,
-} from "next/document";
+  NextScript
+} from 'next/document';
+import Script from 'next/script';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -16,25 +17,36 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Jessy.Co</title>
-          <link rel="icon" href="/favicon.ico" />
+          <Script
+            src="/scripts/init-theme.function.js"
+            strategy="beforeInteractive"
+          />
+          <link
+            rel="icon"
+            href="/favicon.ico"
+          />
           <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.15.4/css/brands.css"
             integrity="sha384-S5yUroXKhsCryF2hYGm7i8RQ/ThL96qmmWD+lF5AZTdOdsxChQktVW+cKP/s4eav"
             crossOrigin="anonymous"
           />
-
           <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
             integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
             crossOrigin="anonymous"
           />
+          <link
+            rel="preload"
+            href="/fonts/Inter.woff2"
+            as="font"
+            type="font/woff2"
+          />
         </Head>
         <body>
-          <Main />
           <NextScript />
+          <Main />
         </body>
       </Html>
     );

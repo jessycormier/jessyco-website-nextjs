@@ -1,24 +1,64 @@
-import Link from "next/link";
-import CenterContentLayout from "../components/layout/center-content.layout";
+import Image from 'next/image';
+import React from 'react';
+import LightSwitch from '../components/light-switch';
+import TextHighlight from '../components/text-highlight.component';
 
-export default function Index() {
-  return (
-    <CenterContentLayout>
-      <img
-        className="rounded-full border-8 border-gray-800 dark:border-gray-700 mt-16"
-        src="/profile.jpg"
-        width={200}
-        height={200}
-      />
+export default class Index extends React.Component {
 
-      <p className="mt-8">
-        Hey, thanks for visiting. My name is Jessy Cormier and I
-        build front-end stuff.
-      </p>
+  private getDate() {
+    const d = new Date();
+    return `${d.getFullYear()}-${(d.getMonth() + 1).toString().padStart(2, '0')}-${d.getDate()}`;
+  }
 
-      <p className="mt-4">
-        See what I'm up to right <Link href="/now"><a>Now</a></Link>.
-      </p>
-    </CenterContentLayout>
-  );
+  render() {
+    return <>
+    <LightSwitch />
+      <section className="dark:bg-gray-800 bg-gray-50 pt-12 pb-12 text-2xl p-4">
+        <div className="container mx-auto">
+          <div className="flex justify-start content-center ">
+            <div className="mr-8 hidden md:block">
+              <Image
+                className="rounded-[18px] border-4 border-gray-800 dark:border-gray-700"
+                src="/profile.jpg"
+                alt="Profile Picture"
+                width={300}
+                height={400}
+                objectFit="cover"
+              />
+            </div>
+            <div className='flex flex-col justify-center text-center md:text-left'>
+              <div className="my-3">
+                Welcome to my website <TextHighlight>Jessy.co</TextHighlight>{' '}
+                I&apos;m Jessy Cormier. I&apos;m a software engineer based in{' '}
+                Canada.
+              </div>
+              <div className="my-3">
+                I&apos;m a{' '}
+                <TextHighlight>Senior Front-End Developer</TextHighlight> with a{' '}
+                passion for <TextHighlight>web development</TextHighlight> and{' '}
+                <TextHighlight>user expereince</TextHighlight>.
+              </div>
+              <div className="my-3">
+                I develop and implement well-considered and maintainable{' '}
+                experiences.
+              </div>
+              <div className="my-3">
+                I believe in <TextHighlight>consistency</TextHighlight>,{' '}
+                <TextHighlight>accessibility</TextHighlight>,{' '}
+                and <TextHighlight>utility</TextHighlight>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='container mx-auto mt-8 flex justify-between text-gray-400 p-4'>
+        <p>
+          More coming soon
+        </p>
+        <p>
+          Last Updated on {this.getDate()}
+        </p>
+      </section>
+    </>;
+  }
 }
