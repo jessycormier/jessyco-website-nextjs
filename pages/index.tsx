@@ -13,12 +13,12 @@ export default class Index extends React.Component {
   render() {
     return <>
     <LightSwitch />
-      <section className="dark:bg-gray-800 bg-gray-50 pt-12 pb-12 text-2xl">
+      <section className="dark:bg-gray-800 bg-gray-50 pt-12 pb-12 text-2xl p-4">
         <div className="container mx-auto">
-          <div className="flex justify-start content-center">
-            <div className="mr-8">
+          <div className="flex justify-start content-center ">
+            <div className="mr-8 hidden md:block">
               <Image
-                className="rounded-[18px] border-4 border-gray-800 dark:border-gray-700 mt-16 "
+                className="rounded-[18px] border-4 border-gray-800 dark:border-gray-700"
                 src="/profile.jpg"
                 alt="Profile Picture"
                 width={300}
@@ -26,23 +26,23 @@ export default class Index extends React.Component {
                 objectFit="cover"
               />
             </div>
-            <div className='flex flex-col justify-center'>
-              <div className="my-2">
+            <div className='flex flex-col justify-center text-center md:text-left'>
+              <div className="my-3">
                 Welcome to my website <TextHighlight>Jessy.co</TextHighlight>{' '}
                 I&apos;m Jessy Cormier. I&apos;m a software engineer based in{' '}
                 Canada.
               </div>
-              <div className="my-2">
+              <div className="my-3">
                 I&apos;m a{' '}
                 <TextHighlight>Senior Front-End Developer</TextHighlight> with a{' '}
                 passion for <TextHighlight>web development</TextHighlight> and{' '}
-                <TextHighlight>user expereince design</TextHighlight>.
+                <TextHighlight>user expereince</TextHighlight>.
               </div>
-              <div className="my-2">
+              <div className="my-3">
                 I develop and implement well-considered and maintainable{' '}
                 experiences.
               </div>
-              <div className="my-2">
+              <div className="my-3">
                 I believe in <TextHighlight>consistency</TextHighlight>,{' '}
                 <TextHighlight>accessibility</TextHighlight>,{' '}
                 and <TextHighlight>utility</TextHighlight>.
@@ -51,7 +51,7 @@ export default class Index extends React.Component {
           </div>
         </div>
       </section>
-      <section className='container mx-auto mt-8 flex justify-between text-gray-400'>
+      <section className='container mx-auto mt-8 flex justify-between text-gray-400 p-4'>
         <p>
           More coming soon
         </p>

@@ -27,7 +27,7 @@ export default function LightSwitch() {
 
   return (
     <button
-      className="absolute top-8 right-8 cursor-pointer w-10 h-10 p-3 bg-gray-200 rounded dark:bg-gray-700"
+      className="absolute top-4 right-4 cursor-pointer w-10 h-10 p-3 bg-gray-200 rounded dark:bg-gray-700"
       onClick={toggleTheme}
     >
       {currentTheme === "light" ? sunIcon() : moonIcon()}
