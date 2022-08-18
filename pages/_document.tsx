@@ -17,10 +17,10 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <Script
+          {/* <Script
             src="/scripts/init-theme.function.js"
             strategy="beforeInteractive"
-          />
+          /> */}
           <link
             rel="icon"
             href="/favicon.ico"
