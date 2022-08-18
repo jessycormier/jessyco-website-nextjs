@@ -14,11 +14,10 @@
   html,
   body {
     font-family: 'Inter', sans-serif;
-    font-size: 20px;
     height: 100%;
 
     @apply transition-colors;
-    @apply bg-gray-50;
+    @apply bg-gray-100;
     @apply dark:bg-gray-900 dark:text-gray-200;
   }
 

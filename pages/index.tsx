@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import LightSwitch from '../components/light-switch';
 import TextHighlight from '../components/text-highlight.component';
 
 export default class Index extends React.Component {
@@ -11,12 +12,13 @@ export default class Index extends React.Component {
 
   render() {
     return <>
-      <section className="dark:bg-gray-800 bg-gray-200 pt-12 pb-12">
+    <LightSwitch />
+      <section className="dark:bg-gray-800 bg-gray-50 pt-12 pb-12 text-2xl">
         <div className="container mx-auto">
           <div className="flex justify-start content-center">
             <div className="mr-8">
               <Image
-                className="rounded-[18px] border-4 border-gray-800 dark:border-gray-700 mt-16"
+                className="rounded-[18px] border-4 border-gray-800 dark:border-gray-700 mt-16 "
                 src="/profile.jpg"
                 alt="Profile Picture"
                 width={300}
@@ -49,7 +51,10 @@ export default class Index extends React.Component {
           </div>
         </div>
       </section>
-      <section className='container mx-auto mt-8 text-right'>
+      <section className='container mx-auto mt-8 flex justify-between text-gray-400'>
+        <p>
+          More coming soon
+        </p>
         <p>
           Last Updated on {this.getDate()}
         </p>
