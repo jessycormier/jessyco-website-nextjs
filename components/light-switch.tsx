@@ -1,33 +1,28 @@
 import { Dispatch, useEffect, useState } from "react";
 
-function themeMode() {
-  const hasWindow = typeof window != "undefined";
 
-  const sysTheme =
-    hasWindow &&
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-
-  const [theme, setTheme] = useState(hasWindow ? localStorage.theme : sysTheme);
+function useDarkMode() {
+  const [theme, setTheme] = useState<string>(
+    typeof window != "undefined" ? localStorage.theme as string ? "dark" : "dark" : "dark"
+  );
   const colorTheme = theme === "dark" ? "light" : "dark";
 
   useEffect(() => {
-    const rootClass = window.document.documentElement.classList;
-    rootClass.remove(colorTheme);
-    rootClass.add(theme);
+    const root = window.document.documentElement;
+    root.classList.remove(colorTheme);
+    root.classList.add(theme);
 
-    if (hasWindow) {
-      localStorage.setItem("theme", theme || "light");
+    if (typeof window !== "undefined") {
+      localStorage.setItem("theme", theme);
     }
-  }, [theme]);
+
+  }, [colorTheme, theme]);
 
   return [colorTheme, setTheme];
 }
 
 export default function LightSwitch() {
-  const [colorTheme, setTheme] = themeMode() as [string, Dispatch<any>];
+  const [colorTheme, setTheme] = useDarkMode() as [string, Dispatch<any>];
   const toggleTheme = () => setTheme(colorTheme === "light" ? "light" : "dark");
 
   function sunIcon() {
