@@ -5,6 +5,7 @@ import Document, {
   Main,
   NextScript
 } from 'next/document';
+import LayoutFooter from '../app/layout/layout-footer.component';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -31,6 +32,7 @@ class MyDocument extends Document {
         <body>
           <NextScript />
           <Main />
+          <LayoutFooter></LayoutFooter>
         </body>
       </Html>
     );
