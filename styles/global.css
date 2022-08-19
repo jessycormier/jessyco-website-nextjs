@@ -21,6 +21,10 @@
     @apply dark:bg-gray-900 dark:text-gray-200;
   }
 
+  p {
+    @apply pb-2;
+  }
+
   a {
     @apply transition-colors;
     @apply text-blue-500 font-bold;
