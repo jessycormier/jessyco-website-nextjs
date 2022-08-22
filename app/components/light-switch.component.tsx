@@ -8,7 +8,7 @@ export default function LightSwitch() {
       
   return (
     <button
-      className="absolute bottom-4 right-4 cursor-pointer w-10 h-10 p-3 rounded bg-gray-200 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 transition-colors"
+      className="fixed top-4 right-4 cursor-pointer w-10 h-10 p-3 rounded bg-gray-200 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 transition-colors"
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
     >
       {theme === "light" ? sunIcon() : moonIcon()}

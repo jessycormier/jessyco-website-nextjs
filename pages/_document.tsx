@@ -8,6 +8,7 @@ import Document, {
 import LayoutFooter from '../app/layout/layout-footer.component';
 
 class MyDocument extends Document {
+
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
@@ -15,7 +16,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html className='transition-colors bg-gray-100 dark:bg-gray-900 dark:text-gray-200'>
         <Head>
           <link
             rel="icon"
