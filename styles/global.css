@@ -15,10 +15,6 @@
   body {
     font-family: 'Inter', sans-serif;
     height: 100%;
-
-    @apply transition-colors;
-    @apply bg-gray-100;
-    @apply dark:bg-gray-900 dark:text-gray-200;
   }
 
   p {

@@ -8,7 +8,7 @@ export default class Index extends React.Component {
 
   render() {
     return <>
-    <LightSwitch />
+      <LightSwitch />
       <section className="dark:bg-gray-800 bg-gray-50 pt-12 pb-12 text-2xl p-4">
         <div className="container mx-auto">
           <div className="flex justify-start content-center ">
