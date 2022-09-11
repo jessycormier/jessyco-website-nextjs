@@ -1,15 +1,11 @@
 import Image from 'next/image';
 import React from 'react';
-import LightSwitch from '../app/components/light-switch.component';
 import TextHighlight from '../app/components/text-highlight.component';
 
 export default class Index extends React.Component {
-
-
   render() {
     return <>
-      <LightSwitch />
-      <section className="dark:bg-gray-800 bg-gray-50 pt-12 pb-12 text-2xl p-4">
+      <section className="dark:bg-gray-800 bg-gray-50 pt-12 pb-12 text-2xl p-4 overflow-hidden  top-0 left-0 right-0">
         <div className="container mx-auto">
           <div className="flex justify-start content-center ">
             <div className="mr-8 hidden md:block">
@@ -23,8 +19,9 @@ export default class Index extends React.Component {
               />
             </div>
             <div className='flex flex-col justify-center text-center md:text-left'>
+
               <p>
-                Welcome to my website <TextHighlight>Jessy.co</TextHighlight>{' '}
+                Hi!, welcome to <TextHighlight>Jessy.co</TextHighlight>{' '}
                 I&apos;m Jessy Cormier. I&apos;m a software engineer based in{' '}
                 Canada.
               </p>
@@ -36,10 +33,7 @@ export default class Index extends React.Component {
               </p>
               <p>
                 I develop and implement well-considered and maintainable{' '}
-                experiences.
-              </p>
-              <p>
-                I believe in <TextHighlight>consistency</TextHighlight>,{' '}
+                experiences, I believe in <TextHighlight>consistency</TextHighlight>,{' '}
                 <TextHighlight>accessibility</TextHighlight>,{' '}
                 and <TextHighlight>utility</TextHighlight>.
               </p>

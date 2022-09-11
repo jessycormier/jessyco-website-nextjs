@@ -5,6 +5,7 @@ import Document, {
   Main,
   NextScript
 } from 'next/document';
+import LightSwitch from '../app/components/light-switch.component';
 import LayoutFooter from '../app/layout/layout-footer.component';
 
 class MyDocument extends Document {
@@ -16,7 +17,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html className='transition-colors bg-gray-100 dark:bg-gray-900 dark:text-gray-200'>
+      <Html className=''>
         <Head>
           <link
             rel="icon"
@@ -30,8 +31,9 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
         </Head>
-        <body>
+        <body className='transition-colors dark:bg-gray-900 dark:text-gray-200'>
           <NextScript />
+          <LightSwitch />
           <Main />
           <LayoutFooter></LayoutFooter>
         </body>
