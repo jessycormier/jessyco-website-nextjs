@@ -1,12 +1,8 @@
 import Document, {
   DocumentContext,
   Head,
-  Html,
-  Main,
-  NextScript
+  Html, Main, NextScript
 } from 'next/document';
-import LightSwitch from '../app/components/light-switch.component';
-import LayoutFooter from '../app/layout/layout-footer.component';
 
 class MyDocument extends Document {
 
@@ -32,10 +28,8 @@ class MyDocument extends Document {
           />
         </Head>
         <body className='transition-colors dark:bg-gray-900 dark:text-gray-200'>
-          <NextScript />
-          <LightSwitch />
           <Main />
-          <LayoutFooter></LayoutFooter>
+          <NextScript />
         </body>
       </Html>
     );
