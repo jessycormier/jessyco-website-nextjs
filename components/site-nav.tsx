@@ -1,6 +1,5 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import cn from 'classnames';
+import Link from 'next/link';
 
 const NavDevide = () => <li><span className="text-gray-500 mx-2">/</span></li>;
 
@@ -28,10 +27,7 @@ type SiteNavProps = {
 };
 
 const SiteNav = ({ routes = [] }: SiteNavProps) => {
-    const router = useRouter();
     const routeCount = routes.length - 1;
-    const r = router.route.split('/');
-
     return <>
         <nav className="rounded-md w-full my-10">
             <ol className="list-reset flex">
