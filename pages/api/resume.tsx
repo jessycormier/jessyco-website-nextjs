@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { getContactInformation } from '../../app/resume/get-contact-information.function';
-import { Resume } from '../../app/resume/resume.interface';
-import { Section } from '../../app/resume/section.enum';
+import { getContactInformation } from '../../interfaces/resume/get-contact-information.function';
+import { Resume } from '../../interfaces/resume/resume.interface';
+import { Section } from '../../interfaces/resume/section.enum';
 
 export default function resumeAPI(req: NextApiRequest, res: NextApiResponse) {
     const contactInformation = getContactInformation(req);
