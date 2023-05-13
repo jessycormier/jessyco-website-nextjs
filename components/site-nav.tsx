@@ -12,7 +12,7 @@ type NavLinkProps = {
 const NavLink = ({ href, active, children }: NavLinkProps) => <>
     <li className={cn({ 'dark:bg-gray-50 dark:text-gray-900 bg-gray-900 text-gray-50 font-bold px-2 rounded': active })}>
         {href ? <Link href={href}>
-            <a>{children}</a>
+            {children}
         </Link> : children
         }
     </li>
